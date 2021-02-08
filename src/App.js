@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import QuestionCard from "./components/QuestionCard";
+import { Button } from "reactstrap";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isStarted: false,
+    };
+  }
+
+  handleStart = () => {
+    this.setState({ isStarted: true });
+  };
+
+  render() {
+    const { isStarted } = this.state;
+    return (
+      <div className="App">
+        <h1>REACT QUIZ APP</h1>
+        {!isStarted && (
+          <Button onClick={this.handleStart} color="primary" id="start">
+            Start
+          </Button>
+        )}
+        {isStarted && <QuestionCard />}
+      </div>
+    );
+  }
 }
 
 export default App;

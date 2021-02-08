@@ -1,38 +1,59 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
   text-align: center;
+  background-image: url("./images/blue-ocean.jpg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-family: "Catamaran", sans-serif;
+  color: navy;
+  padding: 10px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.question-card {
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.question {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: white;
+}
+
+.answers {
+  padding: 2px;
   color: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgb(48, 164, 231);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.answers:hover {
+  background-color: rgb(144, 209, 247);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.correct {
+  background-color: rgb(131, 243, 131);
+}
+
+.wrong {
+  background-color: rgb(247, 132, 132);
 }
