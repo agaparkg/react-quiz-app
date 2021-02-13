@@ -11,7 +11,7 @@ class QuestionCard extends Component {
       amount: 10,
       category: 18,
       difficulty: "easy",
-      qType: "multiple",
+      qType: "boolean",
       isLoading: true,
       questions: [],
       questionNum: 0,
@@ -39,7 +39,7 @@ class QuestionCard extends Component {
 
   handleNext = () => {
     const { questions, questionNum } = this.state;
-    if (questionNum < questions.length) {
+    if (questionNum < questions.length - 1) {
       this.setState({
         questionNum: questionNum + 1,
         correctAnswer: questions[questionNum + 1].correct_answer,
