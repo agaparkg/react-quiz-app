@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Loading from "./Loading";
 import Answers from "./Answers";
 import { Button } from "reactstrap";
+import { convertHtmlChars } from '../utils/decodeHtmlChars';
 
 class QuestionCard extends Component {
   constructor(props) {
@@ -93,7 +94,7 @@ class QuestionCard extends Component {
               <div>
                 Question {questionNum + 1} / {questions.length}
               </div>
-              <div>{question.question}</div>
+              <div>{convertHtmlChars(question.question)}</div>
               <Answers
                 answers={answers}
                 handleAnswer={this.handleAnswer}
