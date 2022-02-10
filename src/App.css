@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  height: calc(100vh - 20px);
   text-align: center;
   background-image: url("./images/blue-ocean.jpg.jpg");
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body {
 .App {
   width: 70%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 5px;
   border: 1px solid grey;
   font-family: "Catamaran", sans-serif;
